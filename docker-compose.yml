@@ -1,0 +1,10 @@
+version: '3'
+services:
+  front:
+    image: node:16.14
+    ports:
+      - 3000:3000
+    volumes: 
+      - ./:/var/www
+    working_dir: /var/www
+    command: bash -c 'yarn ; yarn run dev -- --host'
